@@ -29,13 +29,13 @@ public class DivisionTest {
     }
 
     @Test
-    public void DividedNumberBy100(){
+    public void DividedNumber(){
         double a = 100000 ;
-        a = (int) a ;
-        int length = String.valueOf(a).length();
-        Division add = new Division(a, 100);
+        double b = 1000 ;
+
+        Division add = new Division(a,b);
         try {
-            assert(add.operate() == (length-2));
+            assert(add.operate() == 100);
         } catch (OperationsException e) {
             fail();
         }
