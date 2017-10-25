@@ -2,17 +2,17 @@ package fr.istic.vv;
 
 import javax.management.OperationsException;
 
-public class Substraction implements Operation{
+public class Subtraction implements Operation{
 
     private double FirstTerm;
     private double SecondTerm;
 
-    public Substraction(){
+    public Subtraction(){
         FirstTerm = 0;
         SecondTerm = 0;
     }
 
-    public Substraction(double first, double second){
+    public Subtraction(double first, double second){
         FirstTerm = first;
         SecondTerm = second;
     }
