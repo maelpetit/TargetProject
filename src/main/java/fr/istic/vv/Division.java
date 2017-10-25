@@ -33,12 +33,12 @@ public class Division implements Operation {
     }
 
     public double operate() throws OperationsException {
-        return FirstTerm * SecondTerm;
+        return FirstTerm / SecondTerm;
     }
 
     public String toString(){
         try {
-            return FirstTerm + " * " + SecondTerm + " = " + operate();
+            return FirstTerm + " / " + SecondTerm + " = " + operate();
         } catch (OperationsException e) {
             e.printStackTrace();
         }
