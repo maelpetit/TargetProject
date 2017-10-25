@@ -5,7 +5,7 @@ import org.junit.Test;
 import javax.management.OperationsException;
 import static org.junit.Assert.fail;
 
-public class DivisionTest {
+public class DivisionTest{
     @Test
     public void SimpleDivisionByOne(){
         double a = 10000;

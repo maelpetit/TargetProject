@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import javax.management.OperationsException;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 public class AdditionTest {
 
