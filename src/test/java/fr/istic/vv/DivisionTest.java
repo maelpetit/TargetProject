@@ -33,7 +33,7 @@ public class DivisionTest {
         double a = 100000 ;
         a = (int) a ;
         int length = String.valueOf(a).length();
-        Addition add = new Addition(a, 100);
+        Division add = new Division(a, 100);
         try {
             assert(add.operate() == (length-2));
         } catch (OperationsException e) {
