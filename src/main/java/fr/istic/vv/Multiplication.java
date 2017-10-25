@@ -2,17 +2,16 @@ package fr.istic.vv;
 
 import javax.management.OperationsException;
 
-public class Substraction implements Operation{
-
+public class Multiplication implements Operation{
     private double FirstTerm;
     private double SecondTerm;
 
-    public Substraction(){
+    public Multiplication(){
         FirstTerm = 0;
         SecondTerm = 0;
     }
 
-    public Substraction(double first, double second){
+    public Multiplication(double first, double second){
         FirstTerm = first;
         SecondTerm = second;
     }
@@ -34,12 +33,12 @@ public class Substraction implements Operation{
     }
 
     public double operate() throws OperationsException {
-        return FirstTerm - SecondTerm;
+        return FirstTerm * SecondTerm;
     }
 
     public String toString(){
         try {
-            return FirstTerm + " - " + SecondTerm + " = " + operate();
+            return FirstTerm + " * " + SecondTerm + " = " + operate();
         } catch (OperationsException e) {
             e.printStackTrace();
         }
