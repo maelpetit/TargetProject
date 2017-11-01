@@ -15,6 +15,7 @@ public class AdditionTest {
         try {
             assert(add.operate() == a);
         } catch (OperationsException e) {
+            e.printStackTrace();
             fail();
         }
     }
@@ -28,19 +29,37 @@ public class AdditionTest {
         try {
             assert(add510.operate() == add105.operate());
         } catch (OperationsException e) {
+            e.printStackTrace();
             fail();
         }
     }
 
     @Test
-    public void PositiveAddition(){
-        double a = 1000;
-        double b = 10000;
-        Addition add = new Addition(a, b);
+    public void AddTest(){
+        Addition add = new Addition(1000, 10000);
         try {
-            assert(add.operate() > 0);
+            assert(add.operate() == add.getFirstTerm() + add.getSecondTerm());
         } catch (OperationsException e) {
+            e.printStackTrace();
             fail();
         }
+    }
+
+    @Test
+    public void Test(){
+        try {
+            double a = 0;
+            double b = 1;
+            Addition add = new Addition(a, b);
+            assert(add.getFirstTerm() == a);
+            //assert(add.getFirstTerm() + add.getSecondTerm() == a + b);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void TrueTest(){
+        assert(true);
     }
 }

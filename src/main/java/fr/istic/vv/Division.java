@@ -8,7 +8,7 @@ public class Division implements Operation {
 
     public Division(){
         FirstTerm = 0;
-        SecondTerm = 0;
+        SecondTerm = 1;
     }
 
     public Division(double first, double second){

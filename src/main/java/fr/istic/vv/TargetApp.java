@@ -1,5 +1,9 @@
 package fr.istic.vv;
 
+import javax.management.OperationsException;
+
+import static org.junit.Assert.fail;
+
 /**
  * Hello world!
  *
