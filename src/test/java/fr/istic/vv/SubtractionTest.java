@@ -1,5 +1,6 @@
 package fr.istic.vv;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import javax.management.OperationsException;
@@ -12,7 +13,7 @@ public class SubtractionTest {
         double a = 10000;
         Subtraction sub = new Subtraction(a, 0);
         try {
-            assert(sub.operate() == a);
+            Assert.assertTrue(sub.operate() == a);
         } catch (OperationsException e) {
             fail();
         }
@@ -25,7 +26,7 @@ public class SubtractionTest {
         Subtraction sub1 = new Subtraction(a, b);
         Subtraction sub2 = new Subtraction(b, a);
         try {
-            assert(sub1.operate() == - sub2.operate());
+            Assert.assertTrue(sub1.operate() == - sub2.operate());
         } catch (OperationsException e) {
             fail();
         }
@@ -38,9 +39,9 @@ public class SubtractionTest {
         Subtraction sub = new Subtraction(a, b);
         try {
             if(a < b){
-                assert(sub.operate() < 0);
+                Assert.assertTrue(sub.operate() < 0);
             }else{
-                assert(sub.operate() >= 0);
+                Assert.assertTrue(sub.operate() >= 0);
             }
 
         } catch (OperationsException e) {

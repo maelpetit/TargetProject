@@ -1,5 +1,6 @@
 package fr.istic.vv;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import javax.management.OperationsException;
@@ -12,7 +13,7 @@ public class MultiplicationTest {
         double a = 10000;
         Multiplication mul = new Multiplication(a, 0);
         try {
-            assert(mul.operate() == 0);
+            Assert.assertTrue(mul.operate() == 0);
         } catch (OperationsException e) {
             fail();
         }
@@ -25,7 +26,7 @@ public class MultiplicationTest {
         Multiplication mul1 = new Multiplication(a, b);
         Multiplication mul2 = new Multiplication(b, a);
         try {
-            assert(mul1.operate() == mul2.operate());
+            Assert.assertTrue(mul1.operate() == mul2.operate());
         } catch (OperationsException e) {
             fail();
         }
@@ -37,7 +38,7 @@ public class MultiplicationTest {
         double b = 10000;
         Multiplication mul = new Multiplication(a, b);
         try {
-            assert(mul.operate() > a);
+            Assert.assertTrue(mul.operate() > a);
         } catch (OperationsException e) {
             fail();
         }
