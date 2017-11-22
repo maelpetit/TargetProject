@@ -33,6 +33,24 @@ public class SubtractionTest {
     }
 
     @Test
+    public void opposite(){
+        double a = 10000;
+        double b = 1000;
+        Subtraction sub1 = new Subtraction(a, b);
+        Subtraction sub2 = new Subtraction(-a, -b);
+        Assert.assertTrue(sub1.equals(sub2));
+    }
+
+    @Test
+    public void wrongCommut() {
+        double a = 10000;
+        double b = 1000;
+        Subtraction sub1 = new Subtraction(a, b);
+        Subtraction sub2 = new Subtraction(b, a);
+        Assert.assertTrue(!sub1.equals(sub2));
+    }
+
+    @Test
     public void NegativeSubtraction(){
         double a = 1000;
         double b = 10000;
