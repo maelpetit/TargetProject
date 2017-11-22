@@ -44,4 +44,13 @@ public class Division implements Operation {
         }
         return null;
     }
+
+    public boolean equals(Operation operation) {
+        try {
+            return this.operate() == operation.operate();
+        } catch (OperationsException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

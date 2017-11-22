@@ -27,12 +27,7 @@ public class AdditionTest {
         double b = 1000;
         Addition add510 = new Addition(a, b);
         Addition add105 = new Addition(b, a);
-        try {
-            Assert.assertTrue(add510.operate() == add105.operate());
-        } catch (OperationsException e) {
-            e.printStackTrace();
-            fail();
-        }
+        Assert.assertTrue(add510.equals(add105));
     }
 
     @Test

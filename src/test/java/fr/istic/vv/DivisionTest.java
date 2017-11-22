@@ -41,4 +41,11 @@ public class DivisionTest{
             fail();
         }
     }
+
+    @Test
+    public void Simplification(){
+        Division div1 = new Division(4, 2);
+        Division div2 = new Division(8, 4);
+        Assert.assertTrue(div1.equals(div2));
+    }
 }

@@ -10,4 +10,5 @@ public interface Operation {
     void setSecondTerm(double secondTerm);
     double operate() throws OperationsException;
     String toString();
+    boolean equals(Operation operation);
 }

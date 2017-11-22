@@ -25,11 +25,7 @@ public class MultiplicationTest {
         double b = 1000;
         Multiplication mul1 = new Multiplication(a, b);
         Multiplication mul2 = new Multiplication(b, a);
-        try {
-            Assert.assertTrue(mul1.operate() == mul2.operate());
-        } catch (OperationsException e) {
-            fail();
-        }
+        Assert.assertTrue(mul1.equals(mul2));
     }
 
     @Test
